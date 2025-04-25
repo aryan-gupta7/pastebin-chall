@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Pastebin{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <div>
+            <h3>Register</h3>
+        </div>
+        <div>
+            <form method="POST">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+            <div>
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

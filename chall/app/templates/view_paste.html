@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ paste.title }} - Pastebin{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <a href="/" class="back-button">← Back to Home</a>
+        <h3>{{ paste.title }}</h3>
+        <p>Created by: <span class="username">{{ paste.username }}</span></p>
+        <p>Language: <span id="lang">{{ paste.language | safe }}</span></p>
+        <p>Expires: {{ paste.expiration_time }}</p>
+    </div>
+    <div>
+        <pre><code class="language-{{ paste.language.split()[0] }}">{{ paste.content }}</code></pre>
+    </div>
+    <div style="margin-top: 1rem;">
+        <a href="{{ url_for('report_paste', paste_id=paste.paste_id) }}" class="report-link">Report</a>
+    </div>
+</div>
+
+<script>
+    Prism.highlightAll();
+</script>
+{% endblock %} 

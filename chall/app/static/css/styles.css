@@ -1,0 +1,236 @@
+:root {
+    --bg-color: #0f0f0f;
+    --text-color: #ffffff;
+    --accent-color: #1e90ff;
+    --border-color: #333333;
+    --input-bg: #1a1a1a;
+    --hover-color: #2a2a2a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Consolas', 'Monaco', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #000000;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+nav .welcome {
+    margin-right: 1rem;
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: var(--accent-color);
+}
+
+input, textarea, select {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.list-group-item {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.list-group-item h5 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-color);
+}
+
+.list-group-item p {
+    margin: 0.5rem 0;
+}
+
+.list-group-item a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    background-color: #000000;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.alert {
+    background-color: #1a1a1a;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* Enhanced Prism.js theme */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #b5cea8;
+    font-weight: bold;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #569cd6;
+    font-weight: bold;
+}
+
+.token.function,
+.token.class-name {
+    color: #dcdcaa;
+    font-weight: bold;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d16969;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
