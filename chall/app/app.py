@@ -15,7 +15,7 @@ users = {}
 pastes = {}
 
 def get_current_time():
-    date_header = request.headers.get('Date')
+    date_header = request.headers.get('X-Date')
     if date_header:
         try:
             return datetime.strptime(date_header, '%a, %d %b %Y %H:%M:%S %Z')
